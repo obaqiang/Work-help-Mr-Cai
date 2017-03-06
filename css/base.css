@@ -1,0 +1,34 @@
+﻿/*******************************
+ * @Author 悠然白鹿
+ * @Author Site http://www.l-sky.cn/
+ * @Creation date: 2012.2.22
+ * @Tips: Demo common
+ * @Download:http://www.codefans.net
+ *******************************/
+/* css reset */
+body,h1,h2,h3,h4,h5,h6,div,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53}
+body{_overflow:auto;_height:100%;margin:0 auto;}
+html{_overflow:hidden}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+address,cite,dfn,em,var{font-style:normal}
+code,kbd,pre,samp{font-family:courier new,courier,monospace}
+small{font-size:12px}
+ul,ol,li,dl,dt,dd{list-style:none}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+legend{color:#000}
+fieldset,img{border:0}
+img{background:url(../images/loading.gif) center center no-repeat}
+button,input,select,textarea{font:12px/1.5 tahoma,arial,sans-serif; vertical-align:middle;cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+.clear{display:block;float:none;clear:both;overflow:hidden;visibility:hidden;width:0;height:0;background:none;border:0;font-size:0}
+.return{margin:30px 33px 20px;*margin-bottom:30px;padding:5px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;background:#ffc;border:1px dashed #ccc;font-size:14px;font-family:Comic Sans MS; font-weight:bolder}
+.return a{padding-left:5px;font-weight:normal;text-decoration:none;letter-spacing:1px}
+.return a:hover{text-decoration:underline}
+.return span{float:right}
+.download{margin:30px 33px 20px;*margin-bottom:30px;padding:5px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;background:#e6e6e6;border:1px dashed #df0031;font-size:14px;font-family:Comic Sans MS; font-weight:bolder}
+.download a{padding-left:5px;font-weight:normal;text-decoration:none;letter-spacing:1px}
+.download a:hover{text-decoration:underline}
+.download span{float:right}
+#demo{margin:0 32px;*margin-top:20px;padding:10px 0; line-height:24px;}

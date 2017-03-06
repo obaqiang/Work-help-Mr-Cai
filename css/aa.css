@@ -1,0 +1,75 @@
+body{
+	background-color: #fff !important;
+}
+.color_change_title{
+	text-align: right;
+	margin-top: 20px;
+}
+.color_change{
+	text-align: left;
+	margin-top: 20px;
+}
+.spinner{
+	display: inline-block;
+}
+.value{
+	text-align: center;
+}
+.sel{
+	width: 40%;
+	height: 30px;
+	display: inline-block;
+	padding-left: 60px;
+}
+.sel_cho{
+	display: inline-block;
+	width: 40%;
+	text-align: center;
+	border: 1px solid #ddd;
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+}
+.sel_cho img{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+.sel_op{
+	display: inline-block;
+	width: 40%;
+	border: 1px solid #ddd;
+	line-height: 30px;
+	text-align: center;
+	height: 100px;
+	overflow-y: scroll;
+}
+.sel_op span{
+	width: 80%;
+	display: inline-block;
+}
+.sel option{
+	margin: auto;
+}
+.table_a{
+	border: 1px solid #ddd;
+}
+.table_a th{
+	background: #ddd;
+}
+.table_a th,td{
+	text-align: center;
+}
+.table_a tr th:nth-child(1){
+	width: 1%;
+}
+.input_div{
+	display: inline-block;
+	border: 1px solid #ddd;
+	width: 100%;
+	height: 100px;
+}
+.input_div span{
+	display: inline-block;
+	padding: 5px 5px;
+}

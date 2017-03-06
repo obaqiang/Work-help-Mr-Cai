@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="css/colpick.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/colorpicker.css" rel="stylesheet">
+		<link href="css/colorbox.css" rel="stylesheet">
+		<link href="css/aa.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/ace-ie.min.css" />
+		<link rel="stylesheet" href="css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="css/ace-skins.min.css" />
+		<link rel="stylesheet" href="css/ace.min.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 color_change_title">
+					<span>主色调更换</span>
+				</div>
+				<div class="col-xs-8 color_change">
+					<input type="text" id="picker" name="picker" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-4 color_change_title">
+					套餐滚动
+				</div>
+				<div class="col-xs-1 color_change">
+					<label>
+                        <input id="ispackagescroll" checked="checked" class="one ace ace-switch" type="checkbox" />
+                        <span class="lbl"></span>
+
+                    </label>
+				</div>
+				<div class="col-xs-5 color_change" id="one_area">
+					<span>滚动间隔（S）</span>
+					<input type="text" class="spinner" style="width:30px;" />
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-xs-4 color_change_title">
+					活动滚动
+				</div>
+				<div class="col-xs-1 color_change">
+					<label>
+                        <input id="ispackagescroll" checked="checked" class="two ace ace-switch" type="checkbox" />
+                        <span class="lbl"></span>
+
+                    </label>
+				</div>
+				<div class="col-xs-5 color_change" id="two_area">
+					<span>滚动间隔（S）</span>
+					<input type="text" class="spinner" style="width:30px;" />
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-xs-4 color_change_title">
+					产品滚动
+				</div>
+				<div class="col-xs-1 color_change">
+					<label>
+                        <input id="ispackagescroll" checked="checked" class="three ace ace-switch" type="checkbox" />
+                        <span class="lbl"></span>
+
+                    </label>
+				</div>
+				<div class="col-xs-5 color_change" id="three_area">
+					<span>滚动间隔（S）</span>
+					<input type="text" class="spinner" style="width:30px;" />
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-xs-4 color_change_title">
+					选择模式
+				</div>
+				<div class="col-xs-5 color_change">
+					<!--<select value="lala" class="sel" name="" id="">
+						<option value="1" id="sel_1">6个套餐</option>
+						<option value="2" id="sel_2">6个产品</option>
+						<option value="3" id="sel_3">3个活动</option>
+						<option value="4" id="sel_4">2个套餐+2个活动</option>
+						<option value="5" id="sel_5">4个套餐+1个活动</option>
+					</select>-->
+					<div class="sel_cho" id="moshi_cho">
+						<span id="moshi_cho_title">-选择模式-</span>
+						<img src="img/6px_6px_V.gif" alt="" />
+					</div><br />
+					<div class="sel_op moshi_cho" style="display: none;">
+
+						<span id="sel_1">6个套餐</span><br />
+
+						<span id="sel_2">6个产品</span><br />
+
+						<span id="sel_3">3个活动</span><br />
+
+						<span id="sel_4">2个套餐+2个活动</span><br />
+
+						<span id="sel_5">4个套餐+1个活动</span><br />
+
+					</div>
+
+				</div>
+			</div>
+			<div class="row sel_content sel_1_area">
+				<div class="col-xs-4 color_change_title ">
+					选择套餐
+				</div>
+				<div class="col-xs-5 color_change">
+
+					<div class="sel_cho" id="pack_cho">
+						<span id="pack_cho_title">-选择套餐-</span>
+						<img src="img/6px_6px_V.gif" alt="" />
+					</div><br />
+					<div class="sel_op pack_cho" style="display: none;">
+						<input name="checkbox_pack" type="checkbox" />
+						<span>豪华午餐</span><br />
+						<input name="checkbox_pack" type="checkbox" />
+						<span>豪华午餐</span><br />
+						<input name="checkbox_pack" type="checkbox" />
+						<span>豪华午餐</span><br />
+						<input name="checkbox_pack" type="checkbox" />
+						<span>豪华午餐</span><br />
+						<input name="checkbox_pack" type="checkbox" />
+						<span>豪华午餐</span><br />
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row sel_content sel_3_area">
+				<div class="col-xs-4 color_change_title">
+					选择活动
+				</div>
+				<div class="col-xs-5 color_change">
+
+					<div class="sel_cho" id="act_cho">
+						<span id="act_cho_title">-选择活动-</span>
+						<img src="img/6px_6px_V.gif" alt="" />
+					</div><br />
+					<div class="sel_op act_cho" style="display: none;">
+						<input name="checkbox_act" type="checkbox" />
+						<span>活动卡卡</span><br />
+						<input name="checkbox_act" type="checkbox" />
+						<span>活动卡卡</span><br />
+						<input name="checkbox_act" type="checkbox" />
+						<span>活动卡卡</span><br />
+						<input name="checkbox_act" type="checkbox" />
+						<span>活动卡卡</span><br />
+						<input name="checkbox_act" type="checkbox" />
+						<span>活动卡卡</span><br />
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row sel_content sel_2_area">
+				<div class="col-xs-4 color_change_title">
+					所选产品
+				</div>
+				<div class="col-xs-5 color_change">
+					<div class="input_div">
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row sel_content sel_2_area">
+				<div class="col-xs-4 color_change_title">
+					产品搜索
+				</div>
+				<div class="col-xs-2 color_change">
+					<input type="text" />
+				</div>
+				<div class="col-xs-2 color_change">
+					<select name="" id="">
+						<option value="">编号搜索</option>
+					</select>
+				</div>
+			</div>
+			<div class="row sel_content sel_2_area" style="margin-top: 50px;">
+				<div class="col-xs-3">
+
+				</div>
+				<div class="col-xs-8" style="text-align: center;">
+					<table class="table table_a" border="" cellspacing="" cellpadding="">
+						<tr>
+							<th></th>
+							<th>编号</th>
+							<th>名称</th>
+							<th>价格</th>
+						</tr>
+						<tr>
+							<td>
+								<input data_num='1' class="tab_chec" type="checkbox" />
+							</td>
+							<td>Data</td>
+							<td class="tab_text">蛋糕</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>
+								<input data_num='2' class="tab_chec" type="checkbox" />
+							</td>
+							<td>Data</td>
+							<td class="tab_text">面包</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>
+								<input data_num='3' class="tab_chec" type="checkbox" />
+							</td>
+							<td>Data</td>
+							<td class="tab_text">黑森林</td>
+							<td>Data</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+		</div>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.showLoading.js"></script>
+		<script src="js/jquery.bootstrap.min.js"></script>
+		<script src="js/FormOperation.js"></script>
+		<script src="js/colpick.js" type="text/javascript"></script>
+		<script src="js/jquery.spinner.js" type="text/javascript"></script>
+		<script src="js/colpick.js"></script>
+
+		<script src="js/plugin.js"></script>
+	</body>
+
+	<script>
+		//颜色选择器
+		$('#picker').colpick({
+
+			layout: 'hex',
+
+			submit: 0,
+
+			colorScheme: 'dark',
+
+			onChange: function(hsb, hex, rgb, el, bySetColor) {
+
+				$(el).css('border-color', '#' + hex);
+
+				// Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+
+				if(!bySetColor) $(el).val(hex);
+
+			}
+
+		}).keyup(function() {
+
+			$(this).colpickSetColor(this.value);
+
+		});
+
+		//数量加减
+		$('.spinner').spinner();
+
+		//控制滚动间隔
+		$('.one').click(function() {
+			if($('#one_area').css('display') == 'block') {
+				$('#one_area').hide();
+			} else {
+				$('#one_area').show();
+			}
+		});
+		$('.two').click(function() {
+			if($('#two_area').css('display') == 'block') {
+				$('#two_area').hide();
+			} else {
+				$('#two_area').show();
+			}
+		});
+		$('.three').click(function() {
+			if($('#three_area').css('display') == 'block') {
+				$('#three_area').hide();
+			} else {
+				$('#three_area').show();
+			}
+		});
+		//选择模式
+		$('#moshi_cho').click(function() {
+			if($('.moshi_cho').css('display') == 'none') {
+				$('.moshi_cho').show();
+			} else {
+				$('.moshi_cho').hide();
+			}
+		});
+		//选择套餐
+		$('#pack_cho').click(function() {
+			if($('.pack_cho').css('display') == 'none') {
+				$('.pack_cho').show();
+			} else {
+				$('.pack_cho').hide();
+				var chkbs = document.getElementsByName("checkbox_pack");
+				var chkNum = 0;
+				for(i = 0; i < chkbs.length; i++) {
+					var oChkb = chkbs[i];
+					if(oChkb.checked) {
+						chkNum++;
+					}
+
+				}
+				$('#pack_cho_title').text('选择' + chkNum + '个套餐');
+
+			}
+		});
+		//选择活动
+		$('#act_cho').click(function() {
+			if($('.act_cho').css('display') == 'none') {
+				$('.act_cho').show();
+			} else {
+				$('.act_cho').hide();
+				var chkbs = document.getElementsByName("checkbox_act");
+				var chkNum = 0;
+				for(i = 0; i < chkbs.length; i++) {
+					var oChkb = chkbs[i];
+					if(oChkb.checked) {
+						chkNum++;
+					}
+
+				}
+				$('#act_cho_title').text('选择' + chkNum + '个活动');
+			}
+		});
+		//套餐
+		$('#sel_1').click(function() {
+			$('.sel_content').hide();
+			$('.sel_1_area').show();
+			$('.moshi_cho').hide();
+			$('#moshi_cho_title').text('6个套餐');
+
+		});
+		//产品
+		$('#sel_2').click(function() {
+			$('.sel_content').hide();
+			$('.sel_2_area').show();
+			$('.moshi_cho').hide();
+			$('#moshi_cho_title').text('6个产品');
+		});
+		//活动
+		$('#sel_3').click(function() {
+			$('.sel_content').hide();
+			$('.sel_3_area').show();
+			$('.moshi_cho').hide();
+			$('#moshi_cho_title').text('3个活动');
+		});
+		$('#sel_4').click(function() {
+			$('.sel_content').hide();
+			$('.sel_1_area').show();
+			$('.sel_3_area').show();
+			$('.moshi_cho').hide();
+			$('#moshi_cho_title').text('2个套餐+2个活动');
+		});
+		$('#sel_5').click(function() {
+			$('.sel_content').hide();
+			$('.sel_1_area').show();
+			$('.sel_3_area').show();
+			$('.moshi_cho').hide();
+			$('#moshi_cho_title').text('4个套餐+1个活动');
+		});
+
+		function removeByValue(arr, val) {
+			for(var i = 0; i < arr.length; i++) {
+				if(arr[i] == val) {
+					arr.splice(i, 1);
+					break;
+				}
+			}
+		}
+		var a = [];
+		//表格中checkbox
+		$('.tab_chec').click(function() {
+			var lala = $(this).parent().siblings('.tab_text').text();
+			
+			if($(this).is(':checked') == false) { //如果当前元素已经被选中，则取消
+				$('.input_div').empty();
+				removeByValue(a,lala);
+				console.log(a);
+				for(var i=0;i<a.length;i++){
+					var tab_div = '<span>' + a[i] + '</span>';
+					$('.input_div').append(tab_div);
+				}
+			} else {
+				var tab_div = '<span>' + lala + '</span>';
+				a.push(lala);
+				console.log(a);
+				$('.input_div').append(tab_div);
+			}
+		});
+	</script>
+
+</html>

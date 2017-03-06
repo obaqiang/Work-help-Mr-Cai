@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+			function showDiv(id) {
+
+				document.getElementById("selectOption").style.display = "block";
+				document.getElementById("selectOption").style.position = "absolute";
+				document.getElementById("selectOption").style.top = document.getElementById(id).offsetTop + 25;
+				document.getElementById("selectOption").style.left = document.getElementById(id).offsetLeft + 20;
+			}
+
+			function selectM() {
+				var obj = document.getElementById("mySelect");
+				alert(obj.selectedIndex);
+
+			}
+
+			function checkselect(objname) {
+				o = document.getElementById(objname);
+				t = document.getElementById("output");
+				var intvalue = "";
+				for(i = 0; i < o.length; i++) {
+					if(o.options[i].selected) {
+						intvalue += o.options[i].value + ",";
+					}
+				}
+				t.value = intvalue.substr(0, intvalue.length - 1);
+				alert(intvalue);
+
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<form>
+			<div id="selectOption" style='width:100px;height:50px;z-index:100;border:1px solid #0099FF;background:#cccccc;display:none;'>
+				<select id="mySelect" multiple="multiple" size="4">
+					<option value='苹果'>苹果</option>
+					<option value='桃子'>桃子</option>
+					<option value='香蕉'>香蕉</option>
+					<option value='桔子'>桔子</option>
+				</select>
+				<input type="button" onclick="checkselect('mySelect')" value="checkselect">
+			</div>
+			选中的项目：<input type="text" name="output">
+			<input id="lalla" type="button" onclick="showDiv(this.id)" value="选择">
+			<br/>
+		</form>
+		<p>在您点击 “选择多个” 按钮之前，请尝试同时选取多个选项。在点击 “选择多个” 按钮之后，请再试一次。</p>
+		</form>
+	</body>
+
+</html>
